@@ -4,7 +4,9 @@ Landing comercial del Catálogo de Navidad 2026 de Casa Westfalia (distribuidor 
 
 ## Cómo verla
 
-Abrir `index.html` en el navegador, o servir la carpeta: `npx serve .` / `python3 -m http.server`.
+Abrir `index.html` en el navegador, o servir la carpeta: `npx serve .` / `python3 -m http.server`. Así el formulario usa el plan B (mailto); el envío automático solo funciona publicado en Vercel o con `vercel dev`.
+
+Se publica en **Vercel** desde la rama `main`. Pasos en `DESPLIEGUE.md`.
 
 ## Estructura
 
@@ -14,6 +16,10 @@ css/styles.css        Animaciones, hover, carrusel, botón volver arriba
 js/config.js          Destino del formulario y tiempos del carrusel
 js/data.js            Contenido: colecciones, ventajas retail, productos retail y Horeca, recetas, frases de la cinta
 js/main.js            Pinta las listas, nieve, carruseles, volver arriba y formulario
+api/contacto.js       Función de Vercel: valida el formulario y lo envía por correo con Resend
+package.json          Solo marca el proyecto como módulo ES para la función (no hay dependencias)
+.vercelignore         Archivos que no se publican (referencia/, CLAUDE.md, DESPLIEGUE.md)
+DESPLIEGUE.md         Guía para publicar en Vercel y configurar Resend
 assets/img/           Logo, hero, foto del caviar
 assets/img/productos  Una foto por referencia, nombrada por REF (p. ej. 32847.jpg)
 assets/img/colecciones, assets/img/recetas
@@ -52,16 +58,12 @@ La mayor parte del estilo está en atributos `style` en línea, heredados del ed
 
 ## Tareas pendientes
 
-1. **Formulario → marketing@cwestfalia.es (prioritario).** Ahora mismo, sin `FORM_ENDPOINT`, el formulario abre el programa de correo del visitante con el mensaje preparado (mailto). El cliente quiere recibirlo de forma automática. Hay dos opciones:
-   - Rellenar `FORM_ENDPOINT` en `js/config.js` con un servicio como Formspree o FormSubmit. `main.js` ya envía un POST con FormData y los campos `nombre, empresa, email, telefono, provincia, mensaje, privacidad, canal, _subject`, y muestra la confirmación.
-   - O crear un endpoint propio (PHP o serverless) en el hosting de casawestfalia.com.
-   
-   En ambos casos hay que añadir protección antispam (honeypot o reCAPTCHA/Turnstile) y probar un envío real.
+1. **Formulario → marketing@cwestfalia.es (prioritario).** Hecho en código: `FORM_ENDPOINT` apunta a `/api/contacto` (función de Vercel con Resend) y hay un campo trampa antispam (`web`). Si el envío falla, se abre el mailto como plan B. **Falta:** crear la cuenta de Resend, verificar `cwestfalia.es`, poner `RESEND_API_KEY` y `FORM_FROM` en Vercel y probar un envío real (ver `DESPLIEGUE.md`).
 2. **Política de privacidad:** la casilla del formulario no enlaza a ningún sitio. Falta la URL de la política (pedirla al cliente) y revisar la normativa RGPD/LSSI: aviso de cookies si se añade analítica.
 3. **Logo:** `logo-casa-westfalia.jpg` es un recorte del PDF del catálogo. Sustituirlo por el logo oficial en SVG o PNG con transparencia.
 4. **Imágenes:** convertir a WebP/AVIF, añadir `width`/`height` y `loading="lazy"` a las que quedan por debajo del primer pantallazo. Las fotos de las colecciones también son recortes del PDF.
 5. **SEO y redes sociales:** convertir `og:image` en URL absoluta y añadir `canonical`, favicon en varios tamaños y analítica si el cliente la pide.
-6. **Publicación:** integrar en casawestfalia.com (subcarpeta o subdominio, a confirmar con el cliente).
+6. **Publicación:** en Vercel (ver `DESPLIEGUE.md`). Falta conectar el proyecto y, si se quiere, el subdominio de casawestfalia.com (a confirmar con el cliente).
 7. **Mejora opcional:** en el último paso del carrusel puede quedar hueco a la derecha si no caben tarjetas exactas. Se puede ajustar sin cambiar el aspecto.
 
 ## Contacto que aparece en la web

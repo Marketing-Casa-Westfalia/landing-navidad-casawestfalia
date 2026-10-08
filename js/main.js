@@ -132,47 +132,53 @@
   var form = document.getElementById('lead-form');
   var wrap = document.getElementById('form-wrap');
   var sent = document.getElementById('form-sent');
-  function showSent(name) {
+  var sentMsg = document.getElementById('form-sent-msg');
+  var MSG_MAILTO = sentMsg ? sentMsg.innerHTML : '';
+  var MSG_ENVIADO = 'Hemos recibido su solicitud para el canal <span id="form-canal"></span>. Nuestro equipo comercial se pondrá en contacto con usted muy pronto.';
+  function showSent(name, enviado) {
     var first = (name || '').trim().split(' ')[0];
     document.getElementById('form-greet').textContent = first && first !== '-' ? ', ' + first : '';
+    sentMsg.innerHTML = enviado ? MSG_ENVIADO : MSG_MAILTO;
     document.getElementById('form-canal').textContent = LABELS[canal];
-    if (CFG.FORM_ENDPOINT) {
-      document.getElementById('form-sent-msg').innerHTML = 'Hemos recibido su solicitud para el canal <span id="form-canal"></span>. Nuestro equipo comercial se pondrá en contacto con usted muy pronto.';
-      document.getElementById('form-canal').textContent = LABELS[canal];
-    }
     wrap.hidden = true; sent.hidden = false;
   }
   if (form) {
+    var submitBtn = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var v = function (k) { var el = form.elements[k]; return el && el.value ? el.value.trim() : '-'; };
       var subject = 'Solicitud Navidades Selectas 2026 · ' + LABELS[canal] + ' · ' + v('empresa');
 
-      if (CFG.FORM_ENDPOINT) {
-        var fd = new FormData(form);
-        fd.append('canal', LABELS[canal]);
-        fd.append('_subject', subject);
-        fetch(CFG.FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
-          .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); showSent(v('nombre')); })
-          .catch(function () { alert('No se ha podido enviar la solicitud. Escríbanos a ' + CFG.FORM_EMAIL + '.'); });
-        return;
+      // Plan B: abre el programa de correo del visitante con la solicitud preparada.
+      function sendByMail() {
+        var body = [
+          'Nueva solicitud desde la landing Navidades Selectas 2026', '',
+          'Canal: ' + LABELS[canal],
+          'Nombre y apellidos: ' + v('nombre'),
+          'Empresa o establecimiento: ' + v('empresa'),
+          'Email: ' + v('email'),
+          'Teléfono: ' + v('telefono'),
+          'Provincia: ' + v('provincia'), '',
+          'Mensaje:', v('mensaje'), '',
+          'Acepta la política de privacidad: Sí'
+        ].join('\n');
+        window.location.href = 'mailto:' + (CFG.FORM_EMAIL || 'marketing@cwestfalia.es') +
+          '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        showSent(v('nombre'), false);
       }
 
-      var body = [
-        'Nueva solicitud desde la landing Navidades Selectas 2026', '',
-        'Canal: ' + LABELS[canal],
-        'Nombre y apellidos: ' + v('nombre'),
-        'Empresa o establecimiento: ' + v('empresa'),
-        'Email: ' + v('email'),
-        'Teléfono: ' + v('telefono'),
-        'Provincia: ' + v('provincia'), '',
-        'Mensaje:', v('mensaje'), '',
-        'Acepta la política de privacidad: Sí'
-      ].join('\n');
-      window.location.href = 'mailto:' + (CFG.FORM_EMAIL || 'marketing@cwestfalia.es') +
-        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-      showSent(v('nombre'));
+      // Abriendo index.html desde el disco no hay servidor: se usa directamente el correo.
+      if (!CFG.FORM_ENDPOINT || location.protocol === 'file:') { sendByMail(); return; }
+
+      var fd = new FormData(form);
+      fd.append('canal', LABELS[canal]);
+      fd.append('_subject', subject);
+      if (submitBtn) submitBtn.disabled = true;
+      fetch(CFG.FORM_ENDPOINT, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } })
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); showSent(v('nombre'), true); })
+        .catch(sendByMail)
+        .then(function () { if (submitBtn) submitBtn.disabled = false; });
     });
     document.getElementById('form-reset').addEventListener('click', function () {
       form.reset(); sent.hidden = true; wrap.hidden = false;

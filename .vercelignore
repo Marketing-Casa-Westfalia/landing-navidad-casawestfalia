@@ -1,0 +1,4 @@
+# Archivos del repositorio que no deben publicarse en la web
+referencia/
+CLAUDE.md
+DESPLIEGUE.md
