@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Navidades Selectas 2026 · Casa Westfalia</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F2EC}
+html{scroll-behavior:smooth}
+a{color:#7A5C26}a:hover{color:#233523}
+*{box-sizing:border-box}
+@keyframes fall{0%{transform:translateY(-20px) translateX(0);opacity:0}10%{opacity:.9}100%{transform:translateY(760px) translateX(30px);opacity:0}}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes glow{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes kenburns{from{transform:scale(1.08)}to{transform:scale(1)}}
+.flake{position:absolute;top:0;border-radius:50%;background:#E9D9B0;animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite;pointer-events:none}
+.in1{animation:rise .9s cubic-bezier(.2,.7,.2,1) both .1s}
+.in2{animation:rise .9s cubic-bezier(.2,.7,.2,1) both .3s}
+.in3{animation:rise .9s cubic-bezier(.2,.7,.2,1) both .5s}
+.in4{animation:rise .9s cubic-bezier(.2,.7,.2,1) both .7s}
+.kb{animation:kenburns 2.4s cubic-bezier(.2,.7,.2,1) both}
+.track{animation:marquee 38s linear infinite}
+.glow{animation:glow 3s ease-in-out infinite}
+.zoom img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.zoom:hover img{transform:scale(1.06)}
+.lift{transition:transform .35s ease,box-shadow .35s ease}
+.lift:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(35,53,35,.14)}
+.btn{transition:background .25s ease,color .25s ease,transform .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.rail{scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.arrow{transition:background .25s ease,color .25s ease,opacity .25s ease}
+.arrow:hover{filter:brightness(1.15)}
+.totop{transition:opacity .35s ease,transform .35s ease,background .25s ease}
+.totop:hover{background:#C9A96A!important;color:#1B2A1B!important}
+.arrow:active{transform:scale(.88)}
+.arrow{transition:transform .12s ease,filter .2s ease}
+.track2{transition:transform .55s cubic-bezier(.22,.8,.25,1);will-change:transform}
+@supports (animation-timeline: view()){
+.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+}
+@media (prefers-reduced-motion: reduce){
+.flake,.track,.glow,.kb,.in1,.in2,.in3,.in4,.reveal{animation:none!important}
+}
+input:focus,textarea:focus,select:focus{outline:2px solid #B8975A;outline-offset:1px}
+</style>
+</helmet>
+<div style="font-family: 'Jost', 'Avenir Next', 'Segoe UI', sans-serif; color: #233523; background: #F4F2EC; width: 100%; overflow-x: hidden">
+
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(27,42,27,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(201,169,106,0.25)">
+<nav style="max-width: 1280px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#inicio" style="display: flex; align-items: center; gap: 14px; text-decoration: none">
+<img src="/_blob/85a47ed07eca1688b2d49122e1d384e6" alt="Casa Westfalia" style="height: 46px; width: auto; border-radius: 50%">
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; letter-spacing: 3px; color: #F4F2EC; text-transform: uppercase">Navidades Selectas</span>
+</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase">
+<a href="#coleccion" style="color: #E8E2D2; text-decoration: none">Colección</a>
+<a href="#retail" style="color: #E8E2D2; text-decoration: none">Retail</a>
+<a href="#horeca" style="color: #E8E2D2; text-decoration: none">Horeca y tradicional</a>
+<a href="#menu" style="color: #E8E2D2; text-decoration: none">Menú</a>
+<a href="#contacto" class="btn" style="color: #1B2A1B; background: #C9A96A; padding: 12px 22px; border-radius: 999px; text-decoration: none; font-weight: 600">Solicitar catálogo</a>
+</div>
+</nav>
+</header>
+
+<section id="inicio" style="position: relative; background: #1B2A1B; color: #F4F2EC; overflow: hidden">
+<div style="position: absolute; inset: 0; overflow: hidden">
+<img class="kb" src="/_blob/9bfc00caf548d4b63f8194cecaf6f065" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; opacity: 0.5">
+</div>
+<div style="position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(27,42,27,0.92) 0%, rgba(27,42,27,0.82) 45%, rgba(27,42,27,0.6) 100%)"></div>
+<div style="position: absolute; inset: 0; overflow: hidden; pointer-events: none">
+<sc-for list="{{flakes}}" as="f" hint-placeholder-count="0">
+<span class="flake" style="{{f.style}}"></span>
+</sc-for>
+</div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 120px 32px 110px; display: flex; flex-direction: column; gap: 28px; min-height: 720px; justify-content: center; align-items: center; text-align: center">
+<p class="in1" style="margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #C9A96A">Catálogo de Navidad 2026 · Casa Westfalia</p>
+<h1 class="in2" style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(56px, 8vw, 112px); line-height: 0.95; letter-spacing: 2px; max-width: 900px">Navidades<br>Selectas</h1>
+<div class="in3" style="display: flex; align-items: center; gap: 14px; color: #C9A96A">
+<span style="width: 90px; height: 1px; background: #C9A96A"></span>
+<svg width="34" height="14" viewBox="0 0 34 14" fill="none" stroke="#C9A96A" stroke-width="1.4" aria-hidden="true"><path d="M1 7h32M8 7c2-4 5-5 7-5M8 7c2 4 5 5 7 5M16 7c2-4 5-5 7-5M16 7c2 4 5 5 7 5M24 7c2-3 4-4 6-4M24 7c2 3 4 4 6 4"></path></svg>
+<span style="width: 90px; height: 1px; background: #C9A96A"></span>
+</div>
+<div class="in3" style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<p style="margin: 0; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.6; font-weight: 300; color: #F4F2EC">Una selección de especialidades europeas para una Navidad llena de sabor, tradición y momentos para compartir.</p>
+<p style="margin: 0; font-size: clamp(16px, 1.3vw, 18px); line-height: 1.7; font-weight: 300; color: #E8E2D2">Del foie y los quesos selectos al caviar, la charcutería y los dulces navideños. Productos con carácter, pensados para sorprender a sus clientes y dar valor a su oferta durante una de las campañas más importantes del año.</p>
+</div>
+<div class="in4" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 8px">
+<a href="#retail" class="btn" style="background: #C9A96A; color: #1B2A1B; text-decoration: none; padding: 17px 30px; border-radius: 999px; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600">Soy retail</a>
+<a href="#horeca" class="btn" style="border: 1px solid #C9A96A; color: #F4F2EC; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500">Soy Horeca o canal tradicional</a>
+</div>
+</div>
+</section>
+
+<div style="background: #C9A96A; color: #1B2A1B; overflow: hidden; padding: 16px 0; border-top: 1px solid #B8975A; border-bottom: 1px solid #B8975A">
+<div class="track" style="display: flex; gap: 48px; width: max-content; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-style: italic; white-space: nowrap">
+<sc-for list="{{ribbon}}" as="r" hint-placeholder-count="10">
+<span style="display: flex; align-items: center; gap: 48px">{{r}}<span style="font-style: normal; font-size: 14px">✦</span></span>
+</sc-for>
+</div>
+</div>
+
+<section style="max-width: 900px; margin: 0 auto; padding: 120px 32px 100px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px">
+<p class="reveal" style="margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #7A5C26">Compartir</p>
+<h2 class="reveal" style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(36px, 4.2vw, 58px); line-height: 1.12">Hay momentos que merecen algo especial.</h2>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
+<p style="margin: 0; font-size: 18px; line-height: 1.8; font-weight: 300; color: #3C4A3B">La Navidad se vive alrededor de una mesa. En los sabores que nos reúnen, en las tradiciones que regresan y en esos pequeños detalles que convierten una comida en un recuerdo.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.8; font-weight: 300; color: #3C4A3B">En Casa Westfalia hemos reunido una selección de especialidades para celebrar estas fechas como se merecen: con calidad, carácter y el placer de compartir.</p>
+</div>
+</section>
+
+<section id="coleccion" style="max-width: 1280px; margin: 0 auto; padding: 0 32px 120px; display: flex; flex-direction: column; gap: 44px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #7A5C26">La colección</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 54px); line-height: 1.05">Siete familias. Infinitas formas de celebrar.</h2>
+</div>
+<p style="margin: 0; max-width: 480px; font-size: 16px; line-height: 1.7; color: #3C4A3B">Del foie del Sud-Ouest a los quesos europeos, pasando por la charcutería, el caviar y los dulces más tradicionales. Una colección de especialidades cuidadosamente seleccionadas para llevar lo mejor de la gastronomía a cada celebración.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 14px">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="7">
+<a href="#retail" class="zoom reveal" style="position: relative; display: block; height: 420px; overflow: hidden; border-radius: 4px; text-decoration: none; background: #233523">
+<img src="{{c.img}}" alt="{{c.name}}" style="width: 100%; height: 100%; object-fit: cover">
+<span style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(27,42,27,0) 45%, rgba(27,42,27,0.92) 100%)"></span>
+<span style="position: absolute; left: 18px; right: 18px; bottom: 20px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 11px; letter-spacing: 3px; color: #C9A96A">{{c.num}}</span>
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 23px; line-height: 1.1; color: #F4F2EC">{{c.name}}</span>
+</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<section id="retail" style="background: #ECE8DE; padding: 120px 0">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 56px; align-items: center">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 20px">
+<span style="align-self: flex-start; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #F4F2EC; background: #8E2A2E; padding: 8px 16px; border-radius: 999px">Para retail</span>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 56px); line-height: 1.08">Esta Navidad, haga que su lineal marque la diferencia.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; font-weight: 300; color: #3C4A3B">La campaña navideña es el momento de ofrecer algo más. Una selección de especialidades europeas que combina calidad, presentación y formatos adaptados al consumidor.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; font-weight: 300; color: #3C4A3B">Desde pequeños caprichos gourmet hasta productos para compartir o regalar, referencias pensadas para enriquecer el surtido, captar la atención y generar nuevas oportunidades de venta.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 26px; color: #7A5C26">Una selección que atrae. Una calidad que convence.</p>
+</div>
+<div class="reveal" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<sc-for list="{{retailPoints}}" as="p" hint-placeholder-count="4">
+<div style="background: #F4F2EC; padding: 28px 22px; border-radius: 4px; display: flex; flex-direction: column; justify-content: center; gap: 10px; min-height: 120px; border-top: 2px solid #C9A96A">
+<span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; line-height: 1.15">{{p.t}}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div data-rail="retail" style="display: flex; flex-direction: column; gap: 24px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid #CFC6B2; padding-bottom: 16px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 30px">Referencias pensadas para tu cliente</h3>
+<div style="display: flex; align-items: center; gap: 16px">
+<span style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #233523">{{retailCount}}</span>
+<button type="button" class="arrow" onClick="{{retailPrev}}" aria-label="Anterior" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #233523; background: transparent; color: #233523; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 3L5 9l6 6"></path></svg></button>
+<button type="button" class="arrow" onClick="{{retailNext}}" aria-label="Siguiente" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #233523; background: #233523; color: #F4F2EC; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 3l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div class="rail" onMouseEnter="{{retailHold}}" onMouseLeave="{{retailRelease}}" onTouchStart="{{retailTouchStart}}" onTouchEnd="{{retailTouchEnd}}" onFocus="{{retailHold}}" onBlur="{{retailRelease}}" style="overflow: hidden; padding: 10px 2px 30px">
+<div class="track2" style="{{retailTrack}}">
+<sc-for list="{{retail}}" as="p" hint-placeholder-count="8">
+<article class="lift" style="flex: 0 0 min(300px, 82vw); background: #FBFAF6; border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+<div class="zoom" style="position: relative; height: 260px; overflow: hidden; background: #EFEEEA">
+<img src="{{p.img}}" alt="{{p.name}}" style="width: 100%; height: 100%; object-fit: contain">
+<sc-if value="{{p.nuevo}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; top: 12px; left: 12px; background: #8E2A2E; color: #FFFFFF; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 15px; padding: 4px 12px; border-radius: 999px">¡Nuevo!</span>
+</sc-if>
+</div>
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<span style="font-size: 11px; letter-spacing: 2px; color: #7A5C26">REF. {{p.ref}} · {{p.cat}}</span>
+<h4 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 21px; line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.3em">{{p.name}}</h4>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5649; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">{{p.pitch}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px">
+<span style="font-size: 12px; padding: 5px 10px; border: 1px solid #CFC6B2; border-radius: 999px">{{p.fmt}}</span>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="position: relative; height: 560px; overflow: hidden; background: #1B2A1B">
+<img src="/_blob/7ebb277860d93a26b25325680d105078" alt="Caviar Malossol Etiqueta Azul sobre mesa navideña" style="width: 100%; height: 100%; object-fit: cover; object-position: center 55%">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(27,42,27,0.85) 0%, rgba(27,42,27,0.35) 60%, rgba(27,42,27,0.1) 100%)"></div>
+<div class="reveal" style="position: absolute; inset: 0; max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; flex-direction: column; justify-content: center; gap: 18px; color: #F4F2EC">
+<p style="margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #C9A96A">Pescado y caviar</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(38px, 4.6vw, 64px); line-height: 1.05; max-width: 620px">Los pequeños lujos hacen grandes las celebraciones.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; font-weight: 300; max-width: 540px; color: #E8E2D2">Una selección de especialidades para dar un toque de distinción a los aperitivos, entrantes y mesas más especiales de la Navidad.</p>
+</div>
+</section>
+
+<section id="horeca" style="background: #233523; color: #F4F2EC; padding: 120px 0">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; flex-direction: column; gap: 64px">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 18px; max-width: 820px">
+<span style="align-self: flex-start; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #1B2A1B; background: #C9A96A; padding: 8px 16px; border-radius: 999px">Horeca y canal tradicional</span>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 56px); line-height: 1.08">Especialidades que marcan la diferencia.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; font-weight: 300; color: #D9D3C3">En una campaña donde cada detalle cuenta, disponer del producto adecuado marca la diferencia.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; font-weight: 300; color: #D9D3C3">Nuestra selección profesional reúne especialidades de calidad, formatos adaptados a cada negocio y soluciones versátiles para crear propuestas atractivas, optimizar la preparación y responder a las necesidades de una temporada de máxima actividad.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 20px">
+<div class="reveal" style="border: 1px solid rgba(201,169,106,0.35); border-radius: 4px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#C9A96A" stroke-width="1.4" aria-hidden="true"><path d="M8 22h24a12 12 0 0 1-24 0zM20 10v4M14 12l1 3M26 12l-1 3M6 32h28"></path></svg>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 30px; color: #F4F2EC">Horeca</h3>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #F4F2EC">Más posibilidades para su carta. Más agilidad en su cocina.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #D9D3C3">Desde foie y confit de pato hasta elaboraciones listas para servir, ofrecemos especialidades que ayudan a enriquecer la propuesta gastronómica y agilizar el trabajo durante los servicios navideños.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #D9D3C3">Formatos profesionales para restaurantes, hoteles y catering que buscan combinar calidad, versatilidad y practicidad.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 23px; color: #C9A96A">Menos complicaciones. Más tiempo para sorprender.</p>
+</div>
+<div class="reveal" style="border: 1px solid rgba(201,169,106,0.35); border-radius: 4px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#C9A96A" stroke-width="1.4" aria-hidden="true"><path d="M6 16l3-8h22l3 8M6 16v16h28V16M6 16h28M12 32V22h8v10M24 22h6v5h-6z"></path></svg>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 30px; color: #F4F2EC">Tiendas gourmet, charcutería o mostrador</h3>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 24px; line-height: 1.2; color: #F4F2EC">Un mostrador que despierta el apetito.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #D9D3C3">Patés, galantinas, quesos selectos y especialidades de temporada que destacan por su sabor, presentación y personalidad.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #D9D3C3">Una selección pensada para charcuterías, queserías y tiendas gourmet que quieren diferenciar su oferta, atraer nuevas compras y convertir el mostrador en un auténtico escaparate navideño.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 23px; color: #C9A96A">Productos con carácter. Mostradores con personalidad.</p>
+</div>
+</div>
+<div data-rail="horeca" style="display: flex; flex-direction: column; gap: 24px">
+<div class="reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid rgba(201,169,106,0.35); padding-bottom: 16px">
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 30px">Referencias pensadas específicamente para ti</h3>
+<div style="display: flex; align-items: center; gap: 16px">
+<span style="font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #C9A96A">{{horecaCount}}</span>
+<button type="button" class="arrow" onClick="{{horecaPrev}}" aria-label="Anterior" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #C9A96A; background: transparent; color: #C9A96A; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M11 3L5 9l6 6"></path></svg></button>
+<button type="button" class="arrow" onClick="{{horecaNext}}" aria-label="Siguiente" style="width: 48px; height: 48px; border-radius: 50%; border: 1px solid #C9A96A; background: #C9A96A; color: #1B2A1B; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M7 3l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div class="rail" onMouseEnter="{{horecaHold}}" onMouseLeave="{{horecaRelease}}" onTouchStart="{{horecaTouchStart}}" onTouchEnd="{{horecaTouchEnd}}" onFocus="{{horecaHold}}" onBlur="{{horecaRelease}}" style="overflow: hidden; padding: 10px 2px 30px">
+<div class="track2" style="{{horecaTrack}}">
+<sc-for list="{{horeca}}" as="p" hint-placeholder-count="6">
+<article class="lift" style="flex: 0 0 min(300px, 82vw); background: #1B2A1B; border: 1px solid rgba(201,169,106,0.25); border-radius: 4px; overflow: hidden; display: flex; flex-direction: column">
+<div class="zoom" style="position: relative; height: 260px; overflow: hidden; background: #EFEEEA">
+<img src="{{p.img}}" alt="{{p.name}}" style="width: 100%; height: 100%; object-fit: cover">
+<sc-if value="{{p.nuevo}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; top: 12px; left: 12px; background: #8E2A2E; color: #FFFFFF; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 15px; padding: 4px 12px; border-radius: 999px">¡Nuevo!</span>
+</sc-if>
+</div>
+<div style="padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<span style="font-size: 11px; letter-spacing: 2px; color: #C9A96A">REF. {{p.ref}} · {{p.cat}}</span>
+<h4 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 21px; line-height: 1.15; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.3em; color: #F4F2EC">{{p.name}}</h4>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CFC8B6; flex-grow: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden">{{p.pitch}}</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px">
+<span style="font-size: 12px; padding: 5px 10px; border: 1px solid rgba(201,169,106,0.5); border-radius: 999px; color: #E8E2D2">{{p.fmt}}</span>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="menu" style="max-width: 1280px; margin: 0 auto; padding: 120px 32px; display: flex; flex-direction: column; gap: 48px">
+<div class="reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 40px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #7A5C26">Menú de Navidad · Horeca 2026</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 56px); line-height: 1.08">De nuestra selección, a su próxima carta de Navidad.</h2>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3C4A3B">Seis propuestas gastronómicas creadas con referencias de Casa Westfalia para inspirar sus menús navideños.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #3C4A3B">Recetas con ingredientes, cantidades por persona y elaboración paso a paso, pensadas para descubrir nuevas combinaciones, facilitar la planificación y llevar todo el potencial de nuestros productos a su cocina.</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 24px">
+<sc-for list="{{recipes}}" as="r" hint-placeholder-count="3">
+<article class="reveal" style="display: flex; flex-direction: column; gap: 16px">
+<div class="zoom" style="height: 420px; overflow: hidden; border-radius: 4px; background: #E6E3DC">
+<img src="{{r.img}}" alt="{{r.name}}" style="width: 100%; height: 100%; object-fit: cover">
+</div>
+<span style="font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #8E2A2E">{{r.kind}}</span>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 28px; line-height: 1.1">{{r.name}}</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5649">{{r.desc}}</p>
+</article>
+</sc-for>
+</div>
+</section>
+
+<section id="contacto" style="background: #1B2A1B; color: #F4F2EC; padding: 120px 0; position: relative; overflow: hidden">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 64px; align-items: start; position: relative">
+<div class="reveal" style="display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; color: #C9A96A">Contacto</p>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(36px, 4vw, 54px); line-height: 1.08">Las mejores Navidades empiezan con una buena selección.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #D9D3C3">Descubra todas las especialidades de nuestro Catálogo de Navidad 2026 y prepare su campaña con productos que aportan calidad, diferenciación y nuevas oportunidades para su negocio.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; font-weight: 300; color: #D9D3C3">Solicite el catálogo completo y contacte con nuestro equipo para recibir asesoramiento personalizado.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1.3; color: #C9A96A">Anticípese a la campaña y asegure sus referencias de temporada.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 12px; padding-top: 24px; border-top: 1px solid rgba(201,169,106,0.3); font-size: 16px; color: #E8E2D2">
+<span>Pol. Ind. V-2 · 17111 Vulpellac</span>
+<a href="tel:+34972645525" style="color: #E8E2D2">T. 972 645 525</a>
+<a href="mailto:central@cwestfalia.es" style="color: #C9A96A">central@cwestfalia.es</a>
+<a href="https://www.casawestfalia.com" style="color: #E8E2D2">www.casawestfalia.com</a>
+</div>
+</div>
+<div class="reveal" style="background: #F4F2EC; color: #233523; border-radius: 4px; padding: 40px 36px">
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 40px 0">
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#7A5C26" stroke-width="1.6" aria-hidden="true"><circle cx="24" cy="24" r="21"></circle><path d="M15 24.5l6 6 12-13"></path></svg>
+<h3 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 34px">¡Gracias{{greet}}!</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #3C4A3B">Su solicitud para el canal {{canalLabel}} está lista. Se ha abierto su programa de correo con el mensaje preparado: solo tiene que pulsar «Enviar». Si no se ha abierto, escríbanos a marketing@cwestfalia.es.</p>
+<button type="button" onClick="{{reset}}" class="btn" style="margin-top: 8px; background: transparent; border: 1px solid #233523; color: #233523; padding: 13px 24px; border-radius: 999px; font-family: inherit; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer">Enviar otra consulta</button>
+</div>
+</sc-if>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{submit}}" style="display: flex; flex-direction: column; gap: 18px">
+<h3 style="margin: 0 0 4px; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 30px">Preparemos juntos su campaña de Navidad.</h3>
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5A4420; margin-bottom: 10px; padding: 0">Su canal</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{canales}}" as="c" hint-placeholder-count="3">
+<button type="button" onClick="{{c.pick}}" aria-pressed="{{c.on}}" class="btn" style="{{c.style}}">{{c.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 14px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #5A4420">Nombre y apellidos
+<input name="nombre" required="required" autocomplete="name" onInput="{{setName}}" style="font-family: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #BDB39C; border-radius: 4px; background: #FFFFFF; color: #233523; text-transform: none; letter-spacing: 0">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #5A4420">Empresa o establecimiento
+<input name="empresa" required="required" autocomplete="organization" style="font-family: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #BDB39C; border-radius: 4px; background: #FFFFFF; color: #233523; text-transform: none; letter-spacing: 0">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #5A4420">Email
+<input type="email" name="email" required="required" autocomplete="email" style="font-family: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #BDB39C; border-radius: 4px; background: #FFFFFF; color: #233523; text-transform: none; letter-spacing: 0">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #5A4420">Teléfono
+<input type="tel" name="telefono" autocomplete="tel" style="font-family: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #BDB39C; border-radius: 4px; background: #FFFFFF; color: #233523; text-transform: none; letter-spacing: 0">
+</label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #5A4420">Provincia
+<input name="provincia" autocomplete="address-level1" style="font-family: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #BDB39C; border-radius: 4px; background: #FFFFFF; color: #233523; text-transform: none; letter-spacing: 0">
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #5A4420">¿En qué podemos ayudarle?
+<textarea name="mensaje" rows="4" placeholder="Catálogo completo, tarifas, visita comercial, referencias concretas…" style="font-family: inherit; font-size: 16px; padding: 13px 14px; border: 1px solid #BDB39C; border-radius: 4px; background: #FFFFFF; color: #233523; resize: vertical; text-transform: none; letter-spacing: 0"></textarea>
+</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.5; color: #3C4A3B">
+<input type="checkbox" name="privacidad" required="required" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #233523">
+<span>Acepto la política de privacidad y el tratamiento de mis datos para recibir información comercial.</span>
+</label>
+<button type="submit" class="btn" style="margin-top: 6px; background: #233523; color: #F4F2EC; border: 0; padding: 18px 28px; border-radius: 999px; font-family: inherit; font-size: 14px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; cursor: pointer">Solicitar catálogo e información</button>
+</form>
+</sc-if>
+</div>
+</div>
+</section>
+
+<footer style="background: #142014; color: #CFC8B6; padding: 48px 32px">
+<div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px">
+<div style="display: flex; align-items: center; gap: 16px">
+<img src="/_blob/85a47ed07eca1688b2d49122e1d384e6" alt="Casa Westfalia" style="height: 52px; width: auto; border-radius: 50%">
+<span class="glow" style="font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.4; color: #C9A96A">Que esta Navidad nos siga reuniendo alrededor de lo que más nos gusta compartir.<br>Felices Fiestas y nuestros mejores deseos para 2027.</span>
+</div>
+<span style="font-size: 13px; letter-spacing: 1px">© 2026 Casa Westfalia · Pol. Ind. V-2 · 17111 Vulpellac</span>
+</div>
+</footer>
+<button type="button" class="totop" onClick="{{toTop}}" aria-label="Volver arriba" style="{{topStyle}}"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 16V4M4 10l6-6 6 6"></path></svg></button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"snow":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":7200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { canal: 'retail', sent: false, name: '', idx: { retail: 0, horeca: 0 }, vis: { retail: 4, horeca: 4 } };
+    this.rails = {};
+    this.hold = {};
+    this.pausedUntil = {};
+  }
+  componentDidMount() {
+    this.onScrollTop = (e) => {
+      const t = e && e.target && e.target.scrollTop ? e.target.scrollTop : 0;
+      const y = Math.max(window.scrollY || 0, document.documentElement.scrollTop || 0, t);
+      const show = y > 500;
+      if (show !== !!this.state.showTop) this.setState({ showTop: show });
+    };
+    window.addEventListener('scroll', this.onScrollTop, true);
+    this.measure = () => {
+      const vis = {};
+      ['retail', 'horeca'].forEach((k) => {
+        const el = document.querySelector('[data-rail="' + k + '"] .rail');
+        const card = el && el.querySelector('article');
+        if (el && card) {
+          const w = card.getBoundingClientRect().width + 20;
+          vis[k] = Math.max(1, Math.floor((el.clientWidth + 20) / w));
+        }
+      });
+      this.setState({ vis: Object.assign({}, this.state.vis, vis) });
+    };
+    setTimeout(this.measure, 60);
+    window.addEventListener('resize', this.measure);
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+    this.timer = setInterval(() => {
+      if (document.hidden) return;
+      ['retail', 'horeca'].forEach((k) => {
+        if (this.hold[k] || Date.now() < (this.pausedUntil[k] || 0)) return;
+        this.step(k, 1);
+      });
+    }, 2000);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+    if (this.measure) window.removeEventListener('resize', this.measure);
+    if (this.onScrollTop) window.removeEventListener('scroll', this.onScrollTop, true);
+  }
+  maxIdx(k) {
+    const total = this.totals ? this.totals[k] : 1;
+    const vis = (this.state.vis && this.state.vis[k]) || 1;
+    return Math.max(0, total - vis);
+  }
+  step(k, dir) {
+    const max = this.maxIdx(k);
+    const cur = Math.min((this.state.idx && this.state.idx[k]) || 0, max);
+    let next = cur + dir;
+    if (next > max) next = 0;
+    if (next < 0) next = max;
+    this.setState({ idx: Object.assign({}, this.state.idx, { [k]: next }) });
+  }
+  renderVals() {
+    const B = '/_blob/';
+    const snow = this.props.snow ?? true;
+    const flakes = [];
+    if (snow) {
+      for (let i = 0; i < 46; i++) {
+        const s = 2 + ((i * 7) % 5);
+        const left = (i * 37) % 100;
+        const dur = 9 + ((i * 13) % 11);
+        const delay = -((i * 17) % 19);
+        const op = 0.35 + ((i * 3) % 6) / 10;
+        flakes.push({ style: 'left:' + left + '%;width:' + s + 'px;height:' + s + 'px;animation-duration:' + dur + 's;animation-delay:' + delay + 's;opacity:' + op });
+      }
+    }
+    const phrases = ['Navidades Selectas 2026', 'El sabor de compartir', 'Foie del Sud-Ouest', 'Quesos premiados de toda Europa', 'Caviar para brindar', 'Formatos retail y profesionales', 'Hay cosas que saben mejor juntos'];
+    const ribbon = phrases.concat(phrases);
+    const cats = [
+      { num: '01', name: 'Foie gras y pato', img: B + '104ebd095c2a6ab15abe88563d7c16b0' },
+      { num: '02', name: 'Charcutería y galantinas', img: B + 'ac9e6db43d9e409155ef9fe97856ac55' },
+      { num: '03', name: 'Patés y mousses', img: B + '7c4686ecd0772d57132e8253e546d812' },
+      { num: '04', name: 'Quesos', img: B + 'debf49ea22e748152fedcd88a5cdc2ec' },
+      { num: '05', name: 'Pescado y caviar', img: B + '4965761736626081e6219fdf9d0c7e3f' },
+      { num: '06', name: 'Ensaladas', img: B + '4188047f2b0ff991d7f4d404b0446e48' },
+      { num: '07', name: 'Dulces y vinos', img: B + 'e748b40aa322fe25362c8921e35bd18c' }
+    ];
+    const retailPoints = [
+      { t: 'Formatos pensados para el consumidor', d: 'Porciones y presentaciones adaptadas al consumo en casa, para compartir o disfrutar en ocasiones especiales.' },
+      { t: 'Presentaciones que destacan', d: 'Envases cuidados y formatos atractivos que aportan valor y protagonismo al lineal navideño.' },
+      { t: 'Novedades para sorprender', d: 'Nuevas referencias para ampliar el surtido y ofrecer propuestas diferentes esta Navidad.' },
+      { t: 'Más oportunidades de venta', d: 'Productos complementarios que facilitan la venta cruzada y ayudan a construir una cesta navideña más completa.' }
+    ];
+    const retail = [
+      { ref: '32847', cat: 'Foie', name: 'Bloc Foie Gras de Pato Mi-Cuit', pitch: 'Emulsión con trozos de hígado graso de patos del Empordà, alimentados con maíz.', fmt: '60 g · caja 10 ud.', cad: '50 días', nuevo: false, img: B + '049f9cd2fbab6dff1400c6d0c763b47f' },
+      { ref: '32848', cat: 'Foie', name: 'Foie Gras de Pato entero Mi-Cuit con Higos', pitch: 'Con una capa de mermelada de higos. Patos criados en el Empordà, alimentados con maíz.', fmt: '60 g · caja 6 ud.', cad: '50 días', nuevo: false, img: B + 'c1da83ec8fd1234673380497b92a7faf' },
+      { ref: '32846', cat: 'Foie', name: 'Foie Gras de Pato entero Mi-Cuit', pitch: 'Elaborado con lóbulos enteros de patos criados en el Empordà, alimentados con maíz.', fmt: '60 g · caja 6 ud.', cad: '50 días', nuevo: false, img: B + 'd9e68fdaab7bc253190466422bebed73' },
+      { ref: '32861', cat: 'Foie', name: 'Jamón de Pato Curado loncheado', pitch: 'Curado en bodega durante 20 días. Patos criados en el Empordà.', fmt: '50 g · caja 12 ud.', cad: '4 meses', nuevo: false, img: B + '49ba35978d04305e946b01c50064954d' },
+      { ref: '31659', cat: 'Patés', name: 'Surtido de Mini Patés', pitch: 'Tres patés en lonchas de 25 g sobre bandeja dorada, listos para la mesa.', fmt: '150 g · caja 8 ud.', cad: '28 días', nuevo: false, img: B + '67d11c973ee7efe0347bafd1134355f8' },
+      { ref: '31620', cat: 'Patés', name: 'Mousse de Pato', pitch: 'Loncha cilíndrica de fina mousse de pato envuelta en grasa amarilla. En caja display.', fmt: '100 g · caja 10 ud.', cad: '1 mes', nuevo: false, img: B + '1f4428adbb343f99150038e364c2b395' },
+      { ref: '31621', cat: 'Patés', name: 'Mousse de Pato con Pimienta Negra', pitch: 'Fina mousse de pato envuelta en pimienta negra molida. En caja display.', fmt: '100 g · caja 10 ud.', cad: '1 mes', nuevo: false, img: B + 'cbff903c9d603dccf47c36baa37b7727' },
+      { ref: '31532', cat: 'Patés', name: 'Pâté de foie Yin Yang con Kiwi', pitch: 'Mousse de hígado de pato (21%) con kiwi. Cremosa, con sabor parecido al foie gras.', fmt: '80 g · caja 10 ud.', cad: '45 días', nuevo: false, img: B + 'e0247d71f95ced0da08d67322a29791a' },
+      { ref: '31533', cat: 'Patés', name: 'Pâté de foie Yin Yang con Grosella negra', pitch: 'Mousse de hígado de pato (21%) con jugo de grosella negra y coñac.', fmt: '80 g · caja 10 ud.', cad: '45 días', nuevo: false, img: B + '467d6e0cd1ec13bec2f3a33e48972ec0' },
+      { ref: '31534', cat: 'Patés', name: 'Pâté de foie Yin Yang con Trufa', pitch: 'Mousse de hígado de pato (21%) con aroma de trufa y coñac.', fmt: '80 g · caja 10 ud.', cad: '45 días', nuevo: false, img: B + '700098c50346588d0d35e0e6f4fab13c' },
+      { ref: '56037', cat: 'Patés', name: 'Maridajes para Quesos, Patés y Foie Gras', pitch: 'Tres mermeladas de 43 g: membrillo con vainilla Bourbon, tomate y manzana, y naranja con cardamomo.', fmt: '129 g · caja 16 ud.', cad: '1 año', nuevo: false, img: B + '21f7bc725fcc8a5d548b17fab066642c' },
+      { ref: '40825', cat: 'Quesos', name: 'Queso Tête de Moine en tulipas', pitch: 'Ya raspado en rosetas: textura fina que se funde en la boca.', fmt: '100 g · caja 6 ud.', cad: '1 mes', nuevo: false, img: B + 'a4e6f83c137fcd7d2264913e6fdad308' },
+      { ref: '9353', cat: 'Quesos', name: 'Tabla quesos de oveja: trufa, anchoa y ajo negro', pitch: 'Tres curados de oveja premiados en los World Cheese Awards y los International Cheese & Dairy Awards.', fmt: '300 g · caja 10 ud.', cad: '8 meses', nuevo: false, img: B + '97a4321def3757d9c7132d57a0000fb3' },
+      { ref: '9355', cat: 'Quesos', name: 'Tabla quesos de oveja: trufa, pesto y diablo', pitch: 'Tres curados premiados en los World Cheese Awards, en una sola bandeja.', fmt: '300 g · caja 10 ud.', cad: '8 meses', nuevo: true, img: B + '7511410ea0d7bd81c485b910e2ece4e2' },
+      { ref: '9351', cat: 'Quesos', name: 'Tabla quesos de oveja: trufa, curado y romero', pitch: 'Oro en los International Cheese & Dairy Awards 2023.', fmt: '300 g · caja 10 ud.', cad: '8 meses', nuevo: false, img: B + '4e445ded62c14e15358a412bb13a7648' },
+      { ref: '33455', cat: 'Pescado y caviar', name: 'Salmón Noruego ahumado', pitch: 'Ahumado en frío con madera de haya. Sin espinas, sin piel, sin aditivos.', fmt: '100 g · caja 8 ud.', cad: '40 días', nuevo: false, img: B + '2fed645a4e55b61a742f0fe63ef18d6c' },
+      { ref: '33410', cat: 'Pescado y caviar', name: 'Caviar de Huevas de Salmón Gorbuscha', pitch: 'Esferas de 4 mm, color naranja y aroma intenso. Método Malossol, sin conservadores.', fmt: '50 g · caja 6 ud.', cad: '5 meses', nuevo: false, img: B + '427593447da7f64e82ed795eddaeb367' },
+      { ref: '33411', cat: 'Pescado y caviar', name: 'Caviar de Huevas de Trucha', pitch: 'Truchas de Dinamarca, esferas de 3 mm y grano firme. Edición Platinum.', fmt: '50 g · caja 6 ud.', cad: '6 meses', nuevo: false, img: B + '53224940222a47b607905e794776381a' },
+      { ref: '33417', cat: 'Pescado y caviar', name: 'Caviar Malossol Etiqueta Azul', pitch: 'Acipenser baerii, esferas de 1,5 mm y color gris acero a negro.', fmt: '30 g · caja 4 ud.', cad: '3 meses', nuevo: false, img: B + 'be18f8479a74b3cf44dcc9ac91d9f665' },
+      { ref: '42243', cat: 'Dulces', name: 'Stollen de mazapán', pitch: 'El dulce navideño alemán, con 70% de pasta de mazapán y frutas confitadas.', fmt: '500 g · caja 10 ud.', cad: '3 meses', nuevo: false, img: B + '630d66f2ca611ccef1bcca3d1323a17a' },
+      { ref: '42244', cat: 'Dulces', name: 'Stollen de Navidad', pitch: 'El Christstollen clásico de Kuchenmeister, con pasas y frutas confitadas.', fmt: '500 g · caja 10 ud.', cad: '3 meses', nuevo: false, img: B + '9d18dafefa189813c98fdbe23dcd10fb' },
+      { ref: '42245', cat: 'Dulces', name: 'Stollen de mantequilla', pitch: 'Refinado con auténtica mantequilla, pasas y frutas confitadas.', fmt: '500 g · caja 10 ud.', cad: '3 meses', nuevo: false, img: B + '1169d1cb5ce489e885bb25940692c3e7' },
+      { ref: '42191', cat: 'Dulces', name: 'Stollen con manzana al horno y mazapán', pitch: 'Relleno de manzana al horno con canela y mazapán fino.', fmt: '200 g · caja 20 ud.', cad: '3 meses', nuevo: false, img: B + 'af86b38212f33623d854735a40851be2' },
+      { ref: '82600', cat: 'Vinos', name: 'Vino Blanco Riesling classic 13% vol', pitch: 'Elegante y afrutado, con notas cítricas, albaricoque y toques minerales.', fmt: '75 cl · caja 6 ud.', cad: '1 año', nuevo: false, img: B + 'f5a3575e544462d8e8124a9981221a49' },
+      { ref: '82602', cat: 'Vinos', name: 'Vino blanco Gewürztraminer Spätlese 9,5% vol', pitch: 'Floral y afrutado, con notas de rosa, mango y albaricoque. Ideal como aperitivo o con el postre.', fmt: '75 cl · caja 6 ud.', cad: '7 meses', nuevo: false, img: B + 'd078367298443fd8e0a3d53d8a6b16c0' }
+    ];
+    const horeca = [
+      { ref: '31844', cat: 'Foie', name: 'Bloc Foie Gras Mi-Cuit especial Canapés', pitch: 'Cilindro de 36 mm listo para cortar, con loncha firme y corte limpio. Ideal como medallón, para canapés o pizzas.', fmt: 'Cilindro 300 g · caja 2 ud.', cad: '180 días', nuevo: true, img: B + '586cc3e16ff5ffbd9face8dd51f2d975' },
+      { ref: '31765', cat: 'Pato', name: 'Confit de Pato 4 muslos IGP Sud-Ouest', pitch: 'Salado a mano y cocinado a la marmita en su propia grasa. Base del Menú de Navidad.', fmt: '1,24 kg · caja 1 ud.', cad: '2 años', nuevo: false, img: B + 'a3b0a67833f13cec427447fe2158ad0b' },
+      { ref: '73000', cat: 'Charcutería', name: 'Pechuga de Pavo natural a la parrilla', pitch: 'Asada a la parrilla con su propio hueso, sin ahumar. Se deshuesa tras la cocción para un corte fácil.', fmt: '2,4 kg aprox. · caja 2 ud.', cad: '75 días', nuevo: false, img: B + 'ffb211887f2a1404f669daac0d342581' },
+      { ref: '72801', cat: 'Charcutería', name: 'Pastrami original americano “Nueva York”', pitch: 'Pecho de vacuno macerado, con corteza de especias, ahumado y asado al horno.', fmt: 'Pieza 0,9–3,9 kg', cad: '45 días', nuevo: false, img: B + 'ea3872ec00cf93f79492f0ed9e3146f5' },
+      { ref: '32104', cat: 'Charcutería', name: 'Jamón cocido Pré Guérand con corteza', pitch: 'Jamón cocido superior sin codillo, de cocción lenta en su propio jugo, según la tradición bretona.', fmt: '6,5 kg · caja 1 ud.', cad: '50 días', nuevo: false, img: B + '68beb6f62b8850b0829aa91249c92db5' },
+      { ref: '32333', cat: 'Galantinas', name: 'Galantina de Pato con miel y medallón de foie', pitch: 'Canela, nuez moscada, coñac y Oporto. Disponible a partir del 02/12/26.', fmt: '3 kg · caja 1 ud.', cad: '11 días', nuevo: true, img: B + 'ae62abf85e02f4dce447ae9e1d51aaca' },
+      { ref: '31845', cat: 'Patés', name: 'Le Florin: Mousse de Foie Trufado 1%', pitch: 'Mousse untuosa de carne de ave con delicados matices de trufa. Textura suave y aterciopelada.', fmt: 'Rulo 1 kg · caja 1 ud.', cad: '45 días', nuevo: true, img: B + 'b6224ed0b403d35a0899a09205ee409d' },
+      { ref: '31687', cat: 'Patés', name: 'Paté venado Ciruela y Brandy', pitch: 'Hígado de cerdo y carne de venado con ciruelas y brandy. Textura gruesa, apta para cortar en lonchas.', fmt: '1,5 kg · caja 1 ud.', cad: '35 días', nuevo: true, img: B + 'bbe2a19a6b7b2e15f05ebb0eeeed02e3' },
+      { ref: '31688', cat: 'Patés', name: 'Paté Jabalí con Miel y Pasas', pitch: 'Hígado de cerdo y carne de jabalí con uvas y miel. Textura gruesa, apta para cortar en lonchas.', fmt: '1,5 kg · caja 1 ud.', cad: '30 días', nuevo: true, img: B + '88f6be8481aa2324d2c54f65865882a0' },
+      { ref: '31612', cat: 'Patés', name: 'Paté de Arándanos Rojos y Camembert', pitch: 'Picado fino con arándanos y Camembert, en un bol de cerámica con muñecos de nieve.', fmt: '2 kg · caja 1 ud.', cad: '24 días', nuevo: false, img: B + '96a3cf9b86228ec1190502b88f0d9c99' },
+      { ref: '31477', cat: 'Patés', name: 'Paté de Cerdo con Manzana', pitch: 'Paté cremoso con trozos de manzana, en tarrina de cerámica con forma de manzana.', fmt: '1,7 kg · caja 1 ud.', cad: '28 días', nuevo: true, img: B + 'c89bb94b7e7ce8deee929b121ac793db' },
+      { ref: '31431', cat: 'Patés', name: 'Paté de Ave con rebozuelos y Jamón Serrano', pitch: 'Ave con rebozuelos y setas ostra, realzado con trocitos de jamón serrano.', fmt: '2,6 kg · caja 1 ud.', cad: '22 días', nuevo: true, img: B + '68dd8790f8348c46d9cdf680f8de3e39' },
+      { ref: '31847', cat: 'Patés', name: 'Le Florin: Mousse de Pato con 20% de foie', pitch: 'Con Oporto y aromatizada con Armagnac. Ideal para tablas de patés.', fmt: 'Rulo 1 kg · caja 1 ud.', cad: '40 días', nuevo: true, img: B + '6ace3a815c89f1c18a62ed478acf15d2' },
+      { ref: '40902', cat: 'Quesos', name: 'Volcán de frambuesa: queso fresco de cabra', pitch: 'Queso fresco de cabra con miel de acacia y corazón de mermelada de frambuesa.', fmt: '120 g · caja 6 ud.', cad: '16 días', nuevo: false, img: B + '71be7c674a739a0552e45ce1e800e4a2' },
+      { ref: '39632', cat: 'Quesos', name: 'Queso Blue Stilton DOP', pitch: 'Azul cremoso de leche de vaca, con corteza crujiente y sabor distintivo. El rey de los quesos ingleses.', fmt: '4 kg · caja 1 ud.', cad: '2 meses', nuevo: false, img: B + 'a0384944279f9302b2fdc8e09ad5b101' },
+      { ref: '40766', cat: 'Quesos', name: 'Queso Cheddar irlandés con Cerveza negra', pitch: 'Elaborado a mano e infusionado con cerveza negra irlandesa. Pasta marmolada.', fmt: '1,2 kg · caja 2 ud.', cad: '2 meses', nuevo: true, img: B + '26846767298e5c94038c4057cadc8ea2' },
+      { ref: '31103', cat: 'Quesos', name: 'Queso de abadía Le Postel curado', pitch: 'Sabor intenso y afrutado, textura firme pero fundente, con cristales de maduración.', fmt: '3 kg · caja 1 ud.', cad: '24 días', nuevo: false, img: B + '0f9692822855911818bcffbb18ba6dc7' },
+      { ref: '39878', cat: 'Quesos', name: 'Grand Cru: queso de cabra viejo', pitch: 'Gouda de cabra madurado 12 meses. Elegido mejor queso del mundo 2016. Ideal en virutas.', fmt: '4 kg · caja 1 ud.', cad: '75 días', nuevo: false, img: B + '82f76b6dba92440a2bf597022a16cfdc' },
+      { ref: '33450', cat: 'Pescado', name: 'Salmón Noruego ahumado en frío precortado', pitch: 'Calidad superior, ahumado con madera de haya. Loncheado de cola a cabeza.', fmt: '1,4 kg · caja 1 ud.', cad: '1 mes', nuevo: false, img: B + '8d727a0af721e19ee9573c32a354d9bc' },
+      { ref: '50004', cat: 'Ensaladas', name: 'Ensalada roja de arenque', pitch: 'Arenque con remolacha, pepino, manzana y cebolla. Color rosado natural para montaditos y canapés.', fmt: '2 kg · caja 1 ud.', cad: '26 días', nuevo: false, img: B + 'ae4ab22bc40dcf5c4b2a6ba7d29ed4a2' },
+      { ref: '50049', cat: 'Ensaladas', name: 'Ensalada de marisco', pitch: 'Surimi, cangrejo, pescado y camarón con un toque de rábano, en salsa mayonesa.', fmt: '2 kg · caja 1 ud.', cad: '45 días', nuevo: false, img: B + '34f3fa4cbcddac3f967cfe9a24cd9ac4' }
+    ];
+    const recipes = [
+      { kind: 'Entrante frío', name: 'Crepes de salmón y marisco', desc: 'Salmón noruego ahumado, ensalada de marisco, huevas de salmón y un toque de mayonesa de wasabi.', img: B + '9d8f06022235dc4a568d560c0e86a93f' },
+      { kind: 'Entrante', name: 'Milhojas de crepe con foie y confit de higos', desc: 'Capas de crepe bretón, bloc de foie de pato y confit de higos, coronadas con un bombón de foie.', img: B + '4f52ef87224e89c212394682f9d9cb6f' },
+      { kind: 'Principal', name: 'Confit de pato con boniato e higos', desc: 'Muslo IGP Sud-Ouest de piel crujiente, patatas de boniato y salsa de higos con sus jugos.', img: B + 'ad4dca98e62951d28bf81620bb5afe27' }
+    ];
+    const labels = { retail: 'Retail', horeca: 'Horeca', tradicional: 'Canal tradicional' };
+    const canales = Object.keys(labels).map((k) => {
+      const on = this.state.canal === k;
+      return {
+        label: labels[k],
+        on: on ? 'true' : 'false',
+        pick: () => this.setState({ canal: k }),
+        style: 'font-family:inherit;font-size:14px;padding:12px 20px;min-height:44px;border-radius:999px;cursor:pointer;border:1px solid #233523;' + (on ? 'background:#233523;color:#F4F2EC;' : 'background:transparent;color:#233523;')
+      };
+    });
+    const first = (this.state.name || '').trim().split(' ')[0];
+    this.totals = { retail: retail.length, horeca: horeca.length };
+    const pad = (n) => (n < 10 ? '0' + n : '' + n);
+    const railFor = (k, total) => {
+      const max = this.maxIdx(k);
+      const idx = Math.min((this.state.idx && this.state.idx[k]) || 0, max);
+      const manual = (dir) => { this.pausedUntil[k] = Date.now() + 6000; this.step(k, dir); };
+      return {
+        track: 'display:flex;gap:20px;transform:translateX(calc(-' + idx + ' * (min(300px, 82vw) + 20px)))',
+        prev: () => manual(-1),
+        next: () => manual(1),
+        hold: () => { this.hold[k] = true; },
+        release: () => { this.hold[k] = false; this.pausedUntil[k] = Date.now() + 2000; },
+        touchStart: (e) => { this.hold[k] = true; this.tx = e.touches && e.touches[0] ? e.touches[0].clientX : null; },
+        touchEnd: (e) => {
+          this.hold[k] = false;
+          const x = e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientX : null;
+          if (this.tx != null && x != null && Math.abs(x - this.tx) > 40) manual(x < this.tx ? 1 : -1);
+          else this.pausedUntil[k] = Date.now() + 2000;
+          this.tx = null;
+        },
+        count: pad(idx + 1) + ' / ' + pad(total)
+      };
+    };
+    const rr = railFor('retail', retail.length);
+    const hr = railFor('horeca', horeca.length);
+    const showTop = !!this.state.showTop;
+    return {
+      topStyle: 'position:fixed;right:24px;bottom:24px;z-index:30;width:52px;height:52px;border-radius:50%;border:1px solid #C9A96A;background:#1B2A1B;color:#C9A96A;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.25);' + (showTop ? 'opacity:1;transform:none;pointer-events:auto' : 'opacity:0;transform:translateY(16px);pointer-events:none'),
+      toTop: () => {
+        const el = document.getElementById('inicio');
+        if (el && el.scrollIntoView) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+      retailTrack: rr.track, retailPrev: rr.prev, retailNext: rr.next, retailHold: rr.hold, retailRelease: rr.release, retailTouchStart: rr.touchStart, retailTouchEnd: rr.touchEnd, retailCount: rr.count,
+      horecaTrack: hr.track, horecaPrev: hr.prev, horecaNext: hr.next, horecaHold: hr.hold, horecaRelease: hr.release, horecaTouchStart: hr.touchStart, horecaTouchEnd: hr.touchEnd, horecaCount: hr.count,
+      flakes, ribbon, cats, retailPoints, retail, horeca, recipes, canales,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      greet: first ? ', ' + first : '',
+      canalLabel: labels[this.state.canal],
+      setName: (e) => this.setState({ name: e.target.value }),
+      submit: (e) => {
+        e.preventDefault();
+        const f = e.currentTarget || e.target;
+        const v = (k) => { const el = f && f.elements ? f.elements[k] : null; return el && el.value ? el.value.trim() : '-'; };
+        const canal = labels[this.state.canal];
+        const subject = 'Solicitud Navidades Selectas 2026 · ' + canal + ' · ' + v('empresa');
+        const body = [
+          'Nueva solicitud desde la landing Navidades Selectas 2026',
+          '',
+          'Canal: ' + canal,
+          'Nombre y apellidos: ' + v('nombre'),
+          'Empresa o establecimiento: ' + v('empresa'),
+          'Email: ' + v('email'),
+          'Teléfono: ' + v('telefono'),
+          'Provincia: ' + v('provincia'),
+          '',
+          'Mensaje:',
+          v('mensaje'),
+          '',
+          'Acepta la política de privacidad: Sí'
+        ].join('\n');
+        const url = 'mailto:marketing@cwestfalia.es?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        try {
+          const a = document.createElement('a');
+          a.href = url; a.target = '_top'; a.rel = 'noopener';
+          a.style.display = 'none';
+          document.body.appendChild(a); a.click(); a.remove();
+        } catch (err) {
+          try { window.open(url, '_blank'); } catch (err2) {}
+        }
+        this.setState({ sent: true });
+      },
+      reset: () => this.setState({ sent: false, name: '' })
+    };
+  }
+}
+</script>
+</body>
+</html>
