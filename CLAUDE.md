@@ -39,7 +39,7 @@ La mayor parte del estilo está en atributos `style` en línea, heredados del ed
 7. Banda de fondo "Pescado y caviar".
 8. Horeca y canal tradicional: dos recuadros y carrusel "Referencias pensadas específicamente para ti" (21 referencias).
 9. Menú de Navidad: 3 recetas.
-10. Contacto: formulario y datos de la empresa.
+10. Contacto: texto, imagen de la portada del catálogo (`assets/img/catalogo-navidades-selectas.webp`), datos de la empresa y formulario.
 11. Footer y botón flotante de volver arriba.
 
 ## Comportamiento que hay que mantener
