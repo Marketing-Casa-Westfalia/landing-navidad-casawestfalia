@@ -8,7 +8,7 @@ Abrir `index.html` en el navegador, o servir la carpeta: `npx serve .` / `python
 
 Versión en un solo archivo HTML (imágenes y código dentro, para enseñarla o enviarla): `python3 herramientas/html_unico.py . salida.html`. Su formulario envía a la función publicada en Vercel.
 
-Se publica en **Vercel** desde la rama `main`. Pasos en `DESPLIEGUE.md`.
+Se publica como **plugin de WordPress** en https://www.casawestfalia.com/navidad/CW_Navidades-Selectas-2026.html (el cliente solo tiene acceso a wp-admin). Pasos en `WORDPRESS.md`. El plugin envía el formulario con `wp_mail` vía admin-ajax (no la API REST, que algunos plugins de seguridad bloquean). La versión en Vercel (`DESPLIEGUE.md`, `api/contacto.js` con Resend) queda como alternativa.
 
 ## Estructura
 
@@ -22,6 +22,9 @@ api/contacto.js       Función de Vercel: valida el formulario y lo envía por c
 package.json          Solo marca el proyecto como módulo ES para la función (no hay dependencias)
 .vercelignore         Archivos que no se publican (referencia/, herramientas/, CLAUDE.md, DESPLIEGUE.md)
 herramientas/html_unico.py  Genera la web en un solo archivo HTML
+wordpress/casa-westfalia-navidad.php  Plugin de WordPress: sirve la landing en su URL y envía el formulario con wp_mail
+herramientas/plugin_wordpress.py  Genera casa-westfalia-navidad.zip (plugin + landing con fotos en WebP)
+WORDPRESS.md          Guía para instalar el plugin
 DESPLIEGUE.md         Guía para publicar en Vercel y configurar Resend
 assets/img/           Logo, hero, foto del caviar
 assets/img/productos  Una foto por referencia, nombrada por REF (p. ej. 32847.jpg)
@@ -66,7 +69,7 @@ La mayor parte del estilo está en atributos `style` en línea, heredados del ed
 3. **Logo:** `logo-casa-westfalia.jpg` es un recorte del PDF del catálogo. Sustituirlo por el logo oficial en SVG o PNG con transparencia.
 4. **Imágenes:** convertir a WebP/AVIF, añadir `width`/`height` y `loading="lazy"` a las que quedan por debajo del primer pantallazo. Las fotos de las colecciones también son recortes del PDF.
 5. **SEO y redes sociales:** convertir `og:image` en URL absoluta y añadir `canonical`, favicon en varios tamaños y analítica si el cliente la pide.
-6. **Publicación:** en Vercel (ver `DESPLIEGUE.md`). Falta conectar el proyecto y, si se quiere, el subdominio de casawestfalia.com (a confirmar con el cliente).
+6. **Publicación:** como plugin de WordPress (ver `WORDPRESS.md`). Falta instalarlo en casawestfalia.com y probar un envío real.
 7. **Mejora opcional:** en el último paso del carrusel puede quedar hueco a la derecha si no caben tarjetas exactas. Se puede ajustar sin cambiar el aspecto.
 
 ## Contacto que aparece en la web
