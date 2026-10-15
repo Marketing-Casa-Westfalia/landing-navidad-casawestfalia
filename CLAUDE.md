@@ -4,7 +4,9 @@ Landing comercial del Catálogo de Navidad 2026 de Casa Westfalia (distribuidor 
 
 ## Cómo verla
 
-Abrir `index.html` en el navegador, o servir la carpeta: `npx serve .` / `python3 -m http.server`. Así el formulario usa el plan B (mailto); el envío automático solo funciona publicado en Vercel o con `vercel dev`.
+Abrir `index.html` en el navegador, o servir la carpeta: `npx serve .` / `python3 -m http.server`. El formulario solo envía publicado en Vercel (o con `vercel dev`); sin servidor muestra el aviso de error.
+
+Versión en un solo archivo HTML (imágenes y código dentro, para enseñarla o enviarla): `python3 herramientas/html_unico.py . salida.html`. Su formulario envía a la función publicada en Vercel.
 
 Se publica en **Vercel** desde la rama `main`. Pasos en `DESPLIEGUE.md`.
 
@@ -18,7 +20,8 @@ js/data.js            Contenido: colecciones, ventajas retail, productos retail 
 js/main.js            Pinta las listas, nieve, carruseles, volver arriba y formulario
 api/contacto.js       Función de Vercel: valida el formulario y lo envía por correo con Resend
 package.json          Solo marca el proyecto como módulo ES para la función (no hay dependencias)
-.vercelignore         Archivos que no se publican (referencia/, CLAUDE.md, DESPLIEGUE.md)
+.vercelignore         Archivos que no se publican (referencia/, herramientas/, CLAUDE.md, DESPLIEGUE.md)
+herramientas/html_unico.py  Genera la web en un solo archivo HTML
 DESPLIEGUE.md         Guía para publicar en Vercel y configurar Resend
 assets/img/           Logo, hero, foto del caviar
 assets/img/productos  Una foto por referencia, nombrada por REF (p. ej. 32847.jpg)
@@ -58,7 +61,7 @@ La mayor parte del estilo está en atributos `style` en línea, heredados del ed
 
 ## Tareas pendientes
 
-1. **Formulario → marketing@cwestfalia.es (prioritario).** Hecho en código: `FORM_ENDPOINT` apunta a `/api/contacto` (función de Vercel con Resend) y hay un campo trampa antispam (`web`). Si el envío falla, se abre el mailto como plan B. **Falta:** crear la cuenta de Resend, verificar `cwestfalia.es`, poner `RESEND_API_KEY` y `FORM_FROM` en Vercel y probar un envío real (ver `DESPLIEGUE.md`).
+1. **Formulario → marketing@cwestfalia.es (prioritario).** Hecho en código: `FORM_ENDPOINT` apunta a `/api/contacto` (función de Vercel con Resend) y hay un campo trampa antispam (`web`). El envío es directo, sin abrir el correo del visitante (decisión del cliente: nada de mailto); si falla, se muestra un aviso con el email. **Falta:** crear la cuenta de Resend, verificar `cwestfalia.es`, poner `RESEND_API_KEY` y `FORM_FROM` en Vercel y probar un envío real (ver `DESPLIEGUE.md`).
 2. **Política de privacidad:** la casilla del formulario no enlaza a ningún sitio. Falta la URL de la política (pedirla al cliente) y revisar la normativa RGPD/LSSI: aviso de cookies si se añade analítica.
 3. **Logo:** `logo-casa-westfalia.jpg` es un recorte del PDF del catálogo. Sustituirlo por el logo oficial en SVG o PNG con transparencia.
 4. **Imágenes:** convertir a WebP/AVIF, añadir `width`/`height` y `loading="lazy"` a las que quedan por debajo del primer pantallazo. Las fotos de las colecciones también son recortes del PDF.

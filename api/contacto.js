@@ -24,8 +24,19 @@ const MAX_DEFECTO = 200;
 function json(status, data) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { 'Content-Type': 'application/json; charset=utf-8' }
+    headers: { 'Content-Type': 'application/json; charset=utf-8', ...CORS }
   });
+}
+
+// Permite enviar también desde la versión en un solo archivo HTML (abierta desde el disco).
+const CORS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Accept, Content-Type'
+};
+
+export function OPTIONS() {
+  return new Response(null, { status: 204, headers: CORS });
 }
 
 function limpia(valor, campo) {

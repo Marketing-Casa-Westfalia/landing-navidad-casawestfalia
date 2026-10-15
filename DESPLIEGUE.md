@@ -38,8 +38,8 @@ La versión publicada sale de la rama **`main`**. Compruébelo en Vercel, en
 6. Haga un envío de prueba desde la web y compruebe que llega a marketing@cwestfalia.es.
    Al pulsar «Responder» en ese correo, la respuesta va al email del visitante.
 
-Si algo falla, el visitante no pierde la solicitud: se le abre su programa de correo con el
-mensaje preparado. El motivo del fallo aparece en Vercel, en **Logs**.
+Si algo falla, el visitante ve un aviso con el email de contacto. El motivo del fallo aparece
+en Vercel, en **Logs**.
 
 ## 3. Dominio propio (opcional)
 
